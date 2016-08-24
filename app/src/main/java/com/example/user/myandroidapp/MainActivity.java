@@ -53,6 +53,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             );
 
             infoText.setText(welcomeMessage);
+            int selectedRadioButtonId = optionsGroup.getCheckedRadioButtonId();
+            View selectedRadioButtonView = optionsGroup.findViewById(selectedRadioButtonId);
+            int selectedIndex = optionsGroup.indexOfChild(selectedRadioButtonView);
+
+            RadioButton selectedRadioButton = (RadioButton)selectedRadioButtonView;
+            String radioBtnText = selectedRadioButton.getText().toString();
+
+            int selectedRadioButtonId = optionsGroup.getCheckedRadioButtonId();
+            View selectedRadioButtonView = optionsGroup.findViewById(selectedRadioButtonId);
+            int selectedIndex = optionsGroup.indexOfChild(selectedRadioButtonView);
+
+            RadioButton selectedRadioButton = (RadioButton)selectedRadioButtonView;
+            String radioBtnText = selectedRadioButton.getText().toString();
         }
     }
 }
